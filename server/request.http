@@ -1,0 +1,52 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "phuong",
+    "password": "1"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "phuong",
+    "password": "1"
+}
+
+###
+
+POST http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzMyZGMxMjFkM2NhMTdjYjQzZjEzYzEiLCJpYXQiOjE3MzI3MzYwMTh9.XhUFNFrO0A4gLLwMoP7n_MkZ4DJqST6TKeqVW91NkR4
+Content-Type: application/json
+
+{
+    "title": "phuong's post",
+    "description": "123",
+    "url": "shoppe.com",
+    "status": "LEARNED"
+}
+
+###
+
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzMyZGMxMjFkM2NhMTdjYjQzZjEzYzEiLCJpYXQiOjE3MzI3MzYwMTh9.XhUFNFrO0A4gLLwMoP7n_MkZ4DJqST6TKeqVW91NkR4
+
+###
+PUT http://localhost:5000/api/posts/6732dc311d3ca17cb43f13c4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzMyZGMxMjFkM2NhMTdjYjQzZjEzYzEiLCJpYXQiOjE3MzI3MzYwMTh9.XhUFNFrO0A4gLLwMoP7n_MkZ4DJqST6TKeqVW91NkR4
+
+{
+    "title": "vue",
+    "description": "0",
+    "url": "https://vuejs.org",
+    "status": "LEARNING"
+
+}
+
+###
+DELETE http://localhost:5000/api/posts/6732dc311d3ca17cb43f13c4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzMyZGMxMjFkM2NhMTdjYjQzZjEzYzEiLCJpYXQiOjE3MzI3MzYwMTh9.XhUFNFrO0A4gLLwMoP7n_MkZ4DJqST6TKeqVW91NkR4
